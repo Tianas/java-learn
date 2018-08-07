@@ -24,7 +24,7 @@
     </bean>
 
     <!-- 扫描bean，主要是对应的Controller -->
-    <context:component-scan base-package="controllers" use-default-filters="false">
+    <context:component-scan base-package="spring.controllers" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
