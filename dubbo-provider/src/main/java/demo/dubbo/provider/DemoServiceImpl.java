@@ -4,6 +4,10 @@ package demo.dubbo.provider;
 import com.alibaba.dubbo.rpc.RpcContext;
 import demo.dubbo.api.DemoService;
 
+import java.lang.reflect.Method;
+import java.util.List;
+import java.util.Map;
+
 /**
  * 测试服务端接口实现类
  * @author aotian
@@ -18,8 +22,27 @@ public class DemoServiceImpl implements DemoService {
 	 */
 	@Override
 	public String changeUsername(String username) {
-		System.out.println(RpcContext.getContext().getAttachment("test"));
+		TestServiceImpl testService = new TestServiceImpl();
+		System.out.println(Thread.currentThread().getId());
+
+//		Map<String,String> attachments = RpcContext.getContext().getAttachments();
+//		for(String k : attachments.keySet()){
+//			System.out.println("key="+k+";value="+attachments.get(k));
+//		}
+
+//		RpcContext.getContext().setAttachment("traceId","testChangeUserName");
+		int s = changeRpc(1);
+//		System.out.println(RpcContext.getContext().getAttachment("traceId"));
+		List<String> list = testService.testMockList(username);
+		Map<String,String> map  = testService.testMockMap(username);
+		Meta meta  = testService.testBean(username);
+//		System.out.println(RpcContext.getContext().getAttachment("traceId"));
 		return username + " is changed";
+	}
+
+	private int changeRpc(int i){
+		return i ++;
+//		RpcContext.getContext().setAttachment("traceId","testChangeRpc");
 	}
 
 }

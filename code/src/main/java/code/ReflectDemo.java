@@ -80,9 +80,9 @@ public class ReflectDemo implements Serializable {
             System.out.print("getTypeName参数类型:(");
             for (int j = 0; j < types.length; j++) {
                 if (j == types.length - 1)
-                    System.out.print(types[j].getTypeName());
+                    System.out.print(types[j].getClass());
                 else
-                    System.out.print(types[j].getTypeName() + ",");
+                    System.out.print(types[j].getClass() + ",");
             }
             System.out.println(")");
             System.out.print("toString参数类型:(");

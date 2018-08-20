@@ -14,7 +14,7 @@
     <dubbo:registry address="zookeeper://10.165.124.14:4281"/>
 
     <!--dubbo协议地址-->
-    <dubbo:protocol name="dubbo" port="20880"/>
+    <dubbo:protocol name="dubbo" port="20881"/>
 
     <!--接口声明-->
     <dubbo:service interface="demo.dubbo.api.DemoService" ref="demoService"/>

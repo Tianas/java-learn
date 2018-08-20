@@ -14,8 +14,9 @@ public class Consumer {
 		
 		String username = "ting";
 		DemoService demoService = (DemoService) context.getBean("demoService");
-		RpcContext.getContext().setAttachment("test","testContext");
-		System.out.println(demoService.changeUsername(username));
+		RpcContext.getContext().setAttachment("invokeIds","1713,1714,1716,1717");
+		String result = demoService.changeUsername(username);
+		System.out.println(result);
 	}
 	
 }

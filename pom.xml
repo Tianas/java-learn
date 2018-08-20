@@ -15,6 +15,8 @@
         <module>dubbo-provider</module>
         <module>spring-mvc</module>
         <module>code</module>
+        <module>tomcat-httpserver</module>
+        <module>tomcat-javaweb</module>
     </modules>
 
     <properties>
