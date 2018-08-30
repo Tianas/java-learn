@@ -22,10 +22,11 @@ public class DemoServiceImpl implements DemoService {
 	 */
 	@Override
 	public String changeUsername(String username) {
+		System.out.println(System.currentTimeMillis()+"");
 		TestServiceImpl testService = new TestServiceImpl();
 		System.out.println(Thread.currentThread().getId());
 
-//		Map<String,String> attachments = RpcContext.getContext().getAttachments();
+		Map<String,String> attachments = RpcContext.getContext().getAttachments();
 //		for(String k : attachments.keySet()){
 //			System.out.println("key="+k+";value="+attachments.get(k));
 //		}
@@ -36,7 +37,8 @@ public class DemoServiceImpl implements DemoService {
 		List<String> list = testService.testMockList(username);
 		Map<String,String> map  = testService.testMockMap(username);
 		Meta meta  = testService.testBean(username);
-//		System.out.println(RpcContext.getContext().getAttachment("traceId"));
+		System.currentTimeMillis();
+		System.out.println(System.currentTimeMillis());
 		return username + " is changed";
 	}
 

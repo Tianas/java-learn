@@ -11,5 +11,13 @@
 
     <artifactId>spring-mvc</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.hz.ting</groupId>
+            <artifactId>dubbo-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>
