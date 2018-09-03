@@ -15,12 +15,12 @@
         <module>dubbo-provider</module>
         <module>spring-mvc</module>
         <module>code</module>
-        <module>tomcat-httpserver</module>
+        <!--<module>tomcat-httpserver</module>-->
         <module>tomcat-javaweb</module>
     </modules>
 
     <properties>
-        <spring.version>4.2.5.RELEASE</spring.version> <!-- 统一定义spring的版本号 -->
+        <spring.version>4.2.6.RELEASE</spring.version> <!-- 统一定义spring的版本号 -->
         <!-- mybatis版本号 -->
         <mybatis.version>3.2.6</mybatis.version>
 
