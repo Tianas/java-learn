@@ -17,6 +17,8 @@
         <module>code</module>
         <!--<module>tomcat-httpserver</module>-->
         <module>tomcat-javaweb</module>
+        <module>spring-mvc-code</module>
+        <module>netty-in-action</module>
     </modules>
 
     <properties>
